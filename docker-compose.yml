@@ -63,5 +63,5 @@ services:
         target: /etc/nginx/conf.d/default.conf
         read_only: true
     depends_on:
-      - dev-client
+      - mock-interview-saver
 
