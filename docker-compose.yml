@@ -54,7 +54,7 @@ services:
       - dev-backend
 
   mock-interview-saver:
-    build: .
+    build: ./mock-interview-saver/
     container_name: mock-interview-saver
     command: python /app/start.py
     restart: always
