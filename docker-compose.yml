@@ -32,9 +32,9 @@ services:
       - ./dev/.env
     environment:
       - isDocker=true
-  dev-unknown_mongo:
+  unknown_mongo:
     image: mongo
-    container_name: dev-unknown_mongo
+    container_name: unknown_mongo
     restart: unless-stopped
     env_file:
       - ./dev/.env
