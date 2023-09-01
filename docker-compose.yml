@@ -52,6 +52,20 @@ services:
     depends_on:
       - dev-frontend
       - dev-backend
+
+  mock-interview-saver:
+    build: .
+    container_name: mock-interview-saver
+    command: python /app/start.py
+    restart: always
+    ports:
+      - 3000:5000
+    env_file:
+      - .env
+    volumes:
+      - ./mock-interview-saver/root/:/app/root/
+      - ./mock-interview-saver/start.py:/app/start.py
+      - ./mock-interview-saver/store/:/app/store/      
   nginx:
     image: nginx
     ports:
