@@ -61,7 +61,7 @@ services:
     ports:
       - 3000:5000
     env_file:
-      - .env
+      - ./mock-interview-saver/.env
     volumes:
       - ./mock-interview-saver/root/:/app/root/
       - ./mock-interview-saver/start.py:/app/start.py
